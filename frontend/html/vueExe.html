@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>notebook</title>
+        <script src="../public/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{ message }}</p>
+            <input type="text" v-model="message" />
+            <ul>
+                <li v-for="todo in todos">{{ todo.text }}</li>
+            </ul>
+        </div>
+    <script>
+    var v = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!',
+            todos : [
+                { text : "lpx" },
+                { text : "pl" },
+                { text : "test"}
+            ]
+        }
+    })
+    </script>
+    </body>
+</html>
